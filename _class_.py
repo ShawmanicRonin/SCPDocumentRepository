@@ -1,17 +1,31 @@
 #TODO use the class to create a dictionary and create a uniform display template.
+import colorama
+from colorama import Fore, Back, Style, init
+colorama.init(autoreset=True)
+from munch import Munch
 n = 'null' #if i forgot to remove this, it is a global value to put in functions before I am ready to code them to avoid bugs.
 
 class SCP:
-    SCP = {}
+    def __init__(self, DocLog=None):
+        if DocLog is None:
+            DocLog = {'one':'why'}
+        self.DocLog = DocLog
 
-    def __init__():
-        n
-    @classmethod
-    def return_document(cls):
-        n
+    def add_item(self, key, value):
+        self.DocLog[key] = value
 
-class EasterEgg(SCP):
-    EasterEgg = {'House':'This is not for you.'}
+    def get_item(self, key):
+        return self.DocLog.get(key)
+
+    def print_dict(self):
+        print(self.DocLog)
+
+
+
+
+
+
+
 
 
 

@@ -1,8 +1,10 @@
 import sys
 import random
 import string
+import colorama
 from colorama import Fore, Back, Style #I ran a pip install command to run this code. This link will hopefully give you the same google A.I. results I had... 
 #https://www.google.com/search?q=how+to+print+different+color+text+to+terminal+python&rlz=1C1RXQR_enUS927US927&oq=how+to+print+different+color+text+to+term&gs_lcrp=EgZjaHJvbWUqBwgBECEYoAEyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRigATIHCAQQIRiPAtIBCTE1ODk4ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8
+colorama.init(autoreset=True)
 from _class_ import SCP
 from _class_ import n #importing temp value
 
@@ -24,11 +26,11 @@ def Menu():
           'Maximum sentencing length can exceed preception of',{redacted_25},'years.')
     menu_choice = int(input('>'))
     if menu_choice == 1:
-        n
+        search()
     elif menu_choice == 2:
-        n
+        _random()
     elif menu_choice == 3:
-        n
+        append()
     elif menu_choice == 4:
         exit()
 
@@ -38,7 +40,13 @@ def exit():
  #TODO create a function that takes string input to search for a key name and intigers to search by key number.
 def search():
     print(f'')
+    obj = SCP()
     search_input = input('> ')
+    if search_input in SCP:
+        SCP.get_item()
+    #The easter egg has nothing to do with the SCP foundation.
+    if search_input == "House":
+        print(f'\"{Fore.BLUE}House','\b"' '\n\n\n\n\nThis is not for you.')
 
 #TODO create a function that returns a random archinve entry.
 def _random():
