@@ -68,6 +68,9 @@ from _class_ import SCP
 # print(data.name)        # Output: John
 # print(data.address.city)  # Output: New York
 
-DocLog = {'001':['Keter','Doc']}
+def ChoiceSeparator(i):
+    for i in range():
+        '-'
 
-print(help(SCP))
+ChoiceSeparator(10)
+

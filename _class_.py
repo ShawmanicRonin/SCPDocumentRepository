@@ -6,19 +6,29 @@ from munch import Munch
 n = 'null' #if i forgot to remove this, it is a global value to put in functions before I am ready to code them to avoid bugs.
 
 class SCP:
-    def __init__(self, DocLog=None):
-        if DocLog is None:
-            DocLog = {'one':'why'}
-        self.DocLog = DocLog
+    DocLog = {'001':['Keter', 'Doc']}
 
-    def add_item(self, key, value):
-        self.DocLog[key] = value
+    # Number = DocLog.get[key]
+    # ObjectClass = DocLog.get[value]
 
-    def get_item(self, key):
-        return self.DocLog.get(key)
+    @classmethod
+    def GetDocDeets(cls, Number, ObjectClass, Doc):
+        n
 
-    def print_dict(self):
-        print(self.DocLog)
+    # def __init__(self, Number, ObjectClass, Doc):
+    #     self.Number = Number
+    #     self.ObjectClass = ObjectClass
+    #     self.Doc = Doc
+    
+    def __repr__(self):
+        return "SCP:('{}\n'Object Class:'{}\n'Special Containment Procedures:'{}'".format(self.Number, self.ObjectClass, self.Doc)
+
+    def DocInstanceCreator(self):
+        n
+
+    def DisplayDoc(self):
+        return f''
+
 
 
 
