@@ -24,7 +24,7 @@ ChoiceSeparator = '-'* 5
 DocLog = {'001':['Keter', one],'002':['Euclid', two]}
 
 def Menu():
-    print(f'what would you like to do?\n\n',
+    print(f'\nwhat would you like to do?\n\n',
           'Search the archive', ChoiceSeparator, '\b----- 1\n',
           'Retrieve a random entry', ChoiceSeparator, '2\n',
           'Append the archive', ChoiceSeparator, '\b----- 3\n',
@@ -32,7 +32,7 @@ def Menu():
           'Reminder: Unauthorized accsess of the SCP archive is punishable by a maximum sentence of',
           redacted_5,'years of service as D-class personell.\n',
           'Sentence length varries by sensitivity of compromised material.\n',
-          'Maximum sentencing length can exceed preception of',redacted_25,'years.')
+          'Maximum sentencing length can exceed preception of',redacted_25,'years.\n\n')
     menu_choice = int(input('>'))
     if menu_choice == 1:
         search()
@@ -48,11 +48,11 @@ def exit():
 
  #TODO create a function that takes string input to search for a key name and intigers to search by key number.
 def search():
-    search_input = str(input('What document would you like to read?\n> '))
-    result = search_input
+    search_input = str(input('What document would you like to read?\n\n\n> '))
+    header = f'SCP:{search_input}\n\n'
     if search_input in DocLog:
         # SCP.DocLog.get(key, [])
-        print(f'{Back.WHITE + Fore.BLACK}{DocLog.get(result, 'That entry is not in the archive yet.')}')
+        print(f'\n\n{Style.BRIGHT}{header}{Style.RESET_ALL}{Back.WHITE + Fore.BLACK}{DocLog.get(search_input, 'That entry is not in the archive yet.')}')
     
         #The easter egg has nothing to do with the SCP foundation.
     elif search_input == "House":
