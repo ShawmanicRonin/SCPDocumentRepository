@@ -68,9 +68,7 @@ from _class_ import SCP
 # print(data.name)        # Output: John
 # print(data.address.city)  # Output: New York
 
-def ChoiceSeparator(i):
-    for i in range():
-        '-'
 
+
+ChoiceSeparator(5)
 ChoiceSeparator(10)
-

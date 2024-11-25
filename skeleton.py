@@ -8,8 +8,7 @@ from colorama import Fore, Back, Style #I ran a pip install command to run this 
 colorama.init(autoreset=True)
 #from _class_ import SCP
 from _class_ import n #importing temp value
-from documents import two
-from documents import one
+from docs import *
 
 redacted_10 = ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(10))
 redacted_25 = ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(25))
@@ -21,7 +20,7 @@ ChoiceSeparator = '-'* 5
 #     for _ in range():
 #         '-'
 
-DocLog = {'001':['Keter', one],'002':['Euclid', two]}
+DocLog = {'001':[3, one],'002':[2, two]}
 
 def Menu():
     print(f'\nwhat would you like to do?\n\n',
@@ -45,18 +44,24 @@ def Menu():
 
 def exit():
     webbrowser.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+    sys.exit
 
  #TODO create a function that takes string input to search for a key name and intigers to search by key number.
 def search():
     search_input = str(input('What document would you like to read?\n\n\n> '))
     header = f'SCP:{search_input}\n\n'
+    # ObjectClass = {1:'Safe',2:'Euclid',3:'Keter'}
     if search_input in DocLog:
         # SCP.DocLog.get(key, [])
-        print(f'\n\n{Style.BRIGHT}{header}{Style.RESET_ALL}{Back.WHITE + Fore.BLACK}{DocLog.get(search_input, 'That entry is not in the archive yet.')}')
+        print(f'\n\n{Style.BRIGHT}{header}{Style.RESET_ALL}{'Object Class:'}{ObjectClass}{Back.WHITE + Fore.BLACK}{DocLog.get(search_input, 'That entry is not in the archive yet.')}')
     
-        #The easter egg has nothing to do with the SCP foundation.
+        #The easter egg has nothing to do with the SCP foundation. It refrences House of leaves.
     elif search_input == "House":
-        print(f'\"{Fore.BLUE}House','\b"' '\n\n\n\n\nThis is not for you.')
+        print(f'\n\n\n\n\n{Fore.BLUE}House', '\n\n\n\n\nThis is not for you.\n\n\n\n\n')
+
+def SearchBot(search_input):
+    print('I work')
+
 
 # def search():
 #     print(f'')
